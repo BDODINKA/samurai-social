@@ -1,0 +1,11 @@
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 8fr;
+    grid-template-areas:
+            "header header"
+            "sidebar main";
+
+}

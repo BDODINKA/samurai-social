@@ -1,19 +1,13 @@
 import React from 'react';
-import {Wrapper} from "../Wrapper/Wrapper";
 import styles from "../../styleComponents/header/header.module.css"
+import {HeaderContent} from "./HeaderContent";
 
-export const Header = (props: any) => {
-    if (props.value === 'header') {
+export const Header = () => {
+
         return (
             <div className={styles.header}>
-                <Wrapper value={1}/>
-            </div>
-        );
-    }
-    return (
-        <div className={styles.header}>
-            ERROR
-        </div>
-    );
+                <HeaderContent/>
+            </div>)
+
 
 }

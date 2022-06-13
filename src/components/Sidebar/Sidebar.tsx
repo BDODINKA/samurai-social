@@ -1,20 +1,14 @@
 import React from 'react';
-
-import {Wrapper} from "../Wrapper/Wrapper";
 import styles from "../../styleComponents/sidebar/sidebar.module.css"
+import {SidebarContent} from "./SidebarContent";
 
 
-export const Sidebar = (props:any) => {
-    if(props.value === 'sidebar'){
-        return (
-            <div className={styles.sidebar}>
-                <Wrapper value = {2}/>
-            </div>
-        );
-    }
+export const Sidebar = () => {
     return (
-        <div className='sidebar'>
-            ERROR
+        <div className={styles.sidebar}>
+            <SidebarContent/>
         </div>
-    );
+    )
+
+
 }

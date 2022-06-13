@@ -1,19 +1,14 @@
 import React from 'react';
-import {Wrapper} from "../Wrapper/Wrapper";
 import styles from "../../styleComponents/main/main.module.css"
+import {MainContent} from "./MainContent";
 
 
-export const Main = (props: any) => {
-    if (props.value === 'main') {
+export const Main = () => {
+
         return (
             <div className={styles.main}>
-                <Wrapper value={3}/>
+                <MainContent/>
             </div>
         );
-    }
-    return (
-        <div className={styles.main}>
-            ERROR
-        </div>
-    );
+
 }

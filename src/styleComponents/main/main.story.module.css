@@ -1,0 +1,23 @@
+.story{
+    display: flex;
+    align-items: center;
+}
+.photo{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    height: 300px;
+
+}
+.photo div{
+    background: url("https://cc-prod.scene7.com/is/image/CCProdAuthor/mb_ps_family_marquee_720x520?$png$&jpegSize=200&wid=720") no-repeat;
+    width: 300px;
+    height: 300px;
+    background-position: center;
+}
+
+button{
+    height: 50px;
+    width: 50px;
+}

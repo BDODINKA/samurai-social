@@ -1,0 +1,30 @@
+.your_posts {
+    display: block;
+    padding-left: 50px;
+
+}
+
+.description {
+    width: 400px;
+    height: 100px;
+}
+
+.post {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.logo {
+    background: url("https://media.istockphoto.com/vectors/success-logo-vector-id1180882238?k=20&m=1180882238&s=612x612&w=0&h=TELzlQoUq4BXsD4RqO6UBpsDehyV8Tm6bxc7v2FCZCs=") no-repeat;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 50%;
+}
+.buttons{
+    padding: 15px;
+}
+.buttons button{
+    width: 20%;
+}

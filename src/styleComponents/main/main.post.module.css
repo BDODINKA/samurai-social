@@ -1,0 +1,47 @@
+.posts {
+    display: block;
+    padding: 10px;
+}
+
+.post {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    background: url("https://dynamic.brandcrowd.com/asset/logo/5c8e73da-d151-4e93-89fe-1ab6f4008b7f/logo-search-grid-1x?v=637690197006000000") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+}
+
+.title {
+    font-size: 24px;
+
+}
+
+.time {
+    font-size: 10px;
+    color: antiquewhite;
+}
+
+.photo {
+    text-align: center;
+}
+
+.photo div {
+    display: flex;
+    justify-content: space-between;
+    background: url("https://api.time.com/wp-content/uploads/2019/08/better-smartphone-photos.jpg") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    gap: 20px;
+}
+
+.description {
+font-size: 24px;
+}
+
+

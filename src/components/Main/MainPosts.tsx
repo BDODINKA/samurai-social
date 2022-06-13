@@ -1,18 +1,19 @@
-import React from 'react';
+import React from 'react'
+import style from  '../../styleComponents/main/main.post.module.css'
 
 
 export const MainPosts = () => {
     return (
-        <div className="posts">
-            <div className="post">
-                <div className = "logo"></div>
-                <p className = "title">Alexa</p>
-                <p className = "times">1 hour ago</p>
+        <div className={style.posts}>
+            <div className={style.post}>
+                <div className ={style.logo}>{}</div>
+                <p className ={style.title}>Alexa</p>
+                <p className = {style.time}>1 hour ago</p>
                 <button>...</button>
             </div>
-            <div className="photos">
-                <p className="text">Description</p>
-                <div className = "content">
+            <div className={style.photo}>
+                <p className={style.description}>Description</p>
+                <div className ={style.content}>
                     <div>1</div>
                     <div>2</div>
                     <div>3</div>

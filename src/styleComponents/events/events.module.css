@@ -1,0 +1,24 @@
+.Events{
+    display: grid;
+    grid-template-columns: 2fr 80%;
+}
+.Items{
+    height: 100%;
+    padding-left: 10px;
+    font-size: 32px;
+
+}
+.Item{
+
+}
+.posts{
+    font-size: 24px;
+    color: greenyellow;
+    display: flex;
+    justify-content: space-between;
+}
+.post{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}

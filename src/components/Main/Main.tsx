@@ -9,12 +9,24 @@ import {Route} from "react-router-dom";
 import {RootStateType} from "../../redux/state";
 
 
-export const Main = (props:RootStateType) => {
+type allTypes = {
+    AllPage:RootStateType
+    addPost:(post:string)=>void
+    addNewInputText:(newText:string)=>void
+}
+
+export const Main = (props:allTypes) => {
         return (
 
                     <div className={styles.main}>
-                            <Route path='/Main' component={MainContent}/>
-                            <Route path='/Events' render={()=>(<Events eventPage={props.eventPage}/>)}/>
+                            <Route path='/Main' render={()=>(
+                                <MainContent
+                                    mainPage={props.AllPage.mainPage}
+                                    addPost={props.addPost}
+                                    addNewInputText={props.addNewInputText}
+                                />)
+                            }/>
+                            <Route path='/Events' render={()=>(<Events eventPage={props.AllPage.eventPage}/>)}/>
                             <Route path='/MarketPlace' component={MarketPlace}/>
                             <Route path='/Files' component={Files}/>
                             <Route path='/Friends' component={Friends}/>

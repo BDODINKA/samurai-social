@@ -1,10 +1,15 @@
 import React from 'react';
 import style from "../../styleComponents/events/events.module.css";
-import {RootStateType} from "../../redux/state";
+import {EventPageType} from "../../redux/state";
+
+type eventPeopleType = {
+    eventPeople:EventPageType
+}
 
 
-const EventPeople = (props: RootStateType) => {
-    const people = props.eventPage.PeopleData.map(p =>
+
+const EventPeople = (props: eventPeopleType) => {
+    const people = props.eventPeople.PeopleMass.map(p =>
         <div
             className={style.Item}
             key={p.id}>

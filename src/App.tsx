@@ -4,7 +4,7 @@ import {BrowserRouter} from "react-router-dom";
 import {Sidebar} from "./components/Sidebar/Sidebar";
 import {Main} from "./components/Main/Main";
 import {Header} from "./components/Header/Header";
-import {RootStateType} from "./redux/state";
+import {addNewInputText, addPost, RootStateType} from "./redux/state";
 
 
 type State ={
@@ -18,7 +18,9 @@ function App(props:State) {
                 <Header/>
                 <Sidebar/>
                 <Main
-                    eventPage={props.appState.eventPage}
+                    AllPage={props.appState}
+                    addPost={addPost}
+                    addNewInputText={addNewInputText}
                 />
             </BrowserRouter>
         </>

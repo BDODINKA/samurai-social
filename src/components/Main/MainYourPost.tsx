@@ -1,6 +1,6 @@
 import React, {ChangeEvent} from 'react';
 import style from "../../styleComponents/main/main.yourpost.module.css"
-import {addPost} from "../../redux/state";
+import {store} from "../../redux/state";
 
 type MainYourPostType = {
     addPost:(post:string)=>void
@@ -15,7 +15,7 @@ export const MainYourPost = (props:MainYourPostType) => {
 
     const onClickAddPostHandler = () => {
         let text = newPost.current?.value;
-        addPost(text);
+        store.addPost(text);
     }
 
     const onChangeTextArea = (e:ChangeEvent<HTMLTextAreaElement>) => {

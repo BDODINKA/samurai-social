@@ -2,14 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {RootStateType, State} from "./redux/state";
+import {store} from "./redux/state";
 
 
 
-export const RenderTree = (State:RootStateType)=>{
+
+export const RenderTree = ()=>{
     ReactDOM.render(
-        <App appState={State}/>,
+        <App appState={store.getState()}/>,
         document.getElementById('root')
     );
 }
-RenderTree(State);
+RenderTree();
+
+store.subscribe(RenderTree)

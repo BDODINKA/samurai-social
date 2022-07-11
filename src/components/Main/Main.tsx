@@ -18,7 +18,8 @@ type allTypes = {
 export const Main = (props:allTypes) => {
         return (
 
-                    <div className={styles.main}>
+                    <div className={styles.main} >
+
                             <Route path='/Main' render={()=>(
                                 <MainContent
                                     mainPage={props.AllPage.mainPage}
@@ -30,6 +31,7 @@ export const Main = (props:allTypes) => {
                             <Route path='/MarketPlace' component={MarketPlace}/>
                             <Route path='/Files' component={Files}/>
                             <Route path='/Friends' component={Friends}/>
+
                     </div>
 
 

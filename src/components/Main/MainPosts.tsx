@@ -13,12 +13,12 @@ export const MainPosts = (props: Post) => {
                 <div className={style.posts} key={p.id}>
                     <div className={style.post}>
                         <div className={style.logo}>{}</div>
-                        <p className={style.title}>{p.post}</p>
+                        <p className={style.title}>Name</p>
                         <div className={style.time}>{p.date}</div>
                         <button>...</button>
                     </div>
                     <div className={style.photo}>
-                        <p className={style.description}>Description</p>
+                        <p className={style.description}>{p.post}</p>
                         <div className={style.content}>
                             <div>1</div>
                             <div>2</div>

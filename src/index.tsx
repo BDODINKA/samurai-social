@@ -13,6 +13,6 @@ export const RenderTree = ()=>{
         document.getElementById('root')
     );
 }
+store.subscribe(RenderTree)
 RenderTree();
 
-store.subscribe(RenderTree)

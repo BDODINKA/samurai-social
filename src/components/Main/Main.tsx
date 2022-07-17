@@ -19,14 +19,14 @@ export const Main = (props:allTypes) => {
         return (
 
                     <div className={styles.main} >
+                        <Route path='/Main' render={()=>(
+                            <MainContent
+                                mainPage={props.AllPage.mainPage}
+                                addPost={props.addPost}
+                                addNewInputText={props.addNewInputText}
+                            />
 
-                            <Route path='/Main' render={()=>(
-                                <MainContent
-                                    mainPage={props.AllPage.mainPage}
-                                    addPost={props.addPost}
-                                    addNewInputText={props.addNewInputText}
-                                />)
-                            }/>
+                        ) }/>
                             <Route path='/Events' render={()=>(<Events eventPage={props.AllPage.eventPage}/>)}/>
                             <Route path='/MarketPlace' component={MarketPlace}/>
                             <Route path='/Files' component={Files}/>

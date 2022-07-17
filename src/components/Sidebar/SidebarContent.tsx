@@ -8,7 +8,7 @@ export const SidebarContent = () => {
 
             <ul>
                 <li className="Sidebar__item">
-                    <NavLink to='/Main'>Home</NavLink>
+                    <NavLink to='/Main'>Main</NavLink>
                 </li>
                 <li className="Sidebar__item">
                     <NavLink to='/Events'>Event</NavLink>

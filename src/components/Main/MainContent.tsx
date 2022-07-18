@@ -1,26 +1,37 @@
-import React from 'react';
-import {MainStory} from "./MainStory";
+import {connect} from "react-redux";
+import {AppStateType} from "../../redux/redux-store";
+import {AddNewInputTextAC, AddPostAC, MainPageType} from "../../redux/MainPage.reducer";
 import {MainYourPost} from "./MainYourPost";
 import {MainPosts} from "./MainPosts";
-import {MainPageType} from "../../redux/state";
+import {MainStory} from "./MainStory";
+import {Dispatch} from "redux";
 
-type MainContentType= {
-    mainPage:MainPageType
-    addPost:(post:string)=>void
-    addNewInputText:(newText:string)=>void
+type MainContentType = {
+    MainPage: MainPageType
 }
 
-export const MainContent = (props:MainContentType) => {
-    return (
-        <div className="content">
-            <MainStory/>
-            <MainYourPost
-                addPost = {props.addPost}
-                addNewInputText={props.addNewInputText}
-                mainPage={props.mainPage.newText}
-            />
-            <MainPosts post={props.mainPage} />
-        </div>
-
-    )
+type mapDispatchType = {
+    addPost: (post: string) => void
+    addNewInputText: (newPost: string) => void
 }
+
+const mapStoreToProps = (state: AppStateType): MainContentType => {
+    return {
+        MainPage: state.MainPageReducer
+    }
+}
+const mapToDispatchToProps = (dispatch: Dispatch): mapDispatchType => {
+    return {
+        addPost: (post: string) => {
+            dispatch(AddPostAC(post))
+        },
+        addNewInputText: (newPost: string) => {
+            dispatch(AddNewInputTextAC(newPost))
+        }
+    }
+}
+
+
+export const MainContent = connect(mapStoreToProps, mapToDispatchToProps)(MainYourPost);
+export const MainPost = connect(mapStoreToProps)(MainPosts);
+export const MainStories = connect(mapStoreToProps)(MainStory);

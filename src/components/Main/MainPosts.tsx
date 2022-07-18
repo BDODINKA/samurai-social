@@ -1,15 +1,15 @@
 import React from 'react'
 import style from '../../styleComponents/main/main.post.module.css'
-import {MainPageType} from "../../redux/state";
+import {MainPageType} from "../../redux/MainPage.reducer";
 
 type Post = {
-    post: MainPageType
+    MainPage: MainPageType
 }
 
 export const MainPosts = (props: Post) => {
     return (
         <div className={style.mainPost}>
-            {props.post.mainPost.map(p =>
+            {props.MainPage.mainPost.map(p =>
                 <div className={style.posts} key={p.id}>
                     <div className={style.post}>
                         <div className={style.logo}>{}</div>

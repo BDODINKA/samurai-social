@@ -1,25 +1,37 @@
-import React from 'react';
-import style from '../../styleComponents/events/events.module.css'
-import EventPeople from "./EventPeople";
+import {connect} from "react-redux";
+import {AddNewInputTextAC, AddPostAC} from "../../redux/EventPage.reducer";
 import EventPost from "./EventPost";
-import {EventPageType} from "../../redux/state";
+import {AppStateType} from "../../redux/redux-store";
+import {Dispatch} from "redux";
 
-type EventsType ={
-    eventPage:EventPageType
+type mapAllType ={
+    addPost:(newPost:string)=>void
+    addInputText:(newMessage:string)=>void
 }
 
 
-const Events = (props:EventsType) => {
-    return (
-        <div className={style.Events}>
-            <div className={style.Items}>
-                <EventPeople eventPeople={props.eventPage}/>
-            </div>
-            <div className={style.posts}>
-                <EventPost eventPost={props.eventPage}/>
-            </div>
-        </div>
-    )
-};
 
-export default Events;
+const mapToProps = (state:AppStateType) => {
+  return{
+      EventPeople:state.EventPageReducer
+  }
+}
+
+
+const mapToDispatchToProps = (dispatch:Dispatch):mapAllType => {
+    return{
+        addPost:(newPost:string)=>{
+            dispatch(AddPostAC(newPost))
+        },
+        addInputText:(newMessage:string)=>{
+            dispatch(AddNewInputTextAC(newMessage))
+        }
+    }
+}
+
+
+
+
+
+
+export const Events = connect(mapToProps,mapToDispatchToProps)(EventPost)
